@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,900&subset=cyrillic');
+
+$color: #333;
+$font-family: 'Roboto', sans-serif;
+$radius: 8px;
+$margin: 23px;
+$orange: #f44248;
+
+.to-do-list {
+    margin: 50px auto;
+    width: 1200px;
+    font: 400 25px/50px $font-family;
+    h1 {
+        font: 900 60px/80px $font-family;
+        color: $color;
+        text-align: center;
+        span {
+            color: $orange;
+        }
+    }
+    form {
+        display: inline-block;
+        input {
+            margin: 0 $margin;
+            font: 400 25px/45px $font-family; 
+            border: 1px solid $color;
+            background: white; 
+            border-radius: $radius;
+            padding: 0 10px;
+            color: $orange;
+        }
+        input[type=text] {
+            width: 850px;
+        }
+        input[type=submit] {
+            margin-left: 0;
+            width: 250px;
+            transition: 0.15s linear;
+        }
+        input[type=submit]:hover {
+            background: $color;
+        }
+    }
+    &__tasks {
+       width: 1150px;
+       height: 320px;
+       margin: 50px auto;
+       border: 1px solid $color;
+       border-radius: $radius;
+       overflow: auto;
+       div {
+            display: inline-block;
+            margin: 13px;
+            width: 320px;
+            color: $orange;
+            background: $color;
+            line-height: 30px;
+            border: 1px solid $color;
+            border-radius: $radius;
+            padding: 0 20px 0 5px;
+            position: relative;
+            span {
+                position: absolute;
+                right: 4px;
+                top: 4px;
+                width: 20px;
+                height: 20px;
+                opacity: 0.7;
+            }
+            span:hover {
+                opacity: 1;
+            }
+            span:before, span:after {
+                position: absolute;
+                left: 10px;
+                content: '';
+                height: 21px;
+                width: 2px;
+                background-color: $orange;
+            }
+            span:before {
+                transform: rotate(45deg);
+            }
+            span:after {
+                transform: rotate(-45deg);
+            }
+       }
+    }
+}
