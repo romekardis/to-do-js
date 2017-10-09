@@ -17,8 +17,8 @@ window.addEventListener('DOMContentLoaded', function () {
             span = document.createElement('span'), 
             inputValue = inputText.value;
 
-        if (inputValue.length > 20) {
-            p.textContent = inputValue.split('').slice(0, 20).join('') + '...';
+        if (inputValue.length > 15) {
+            p.textContent = inputValue.split('').slice(0, 15).join('') + '...';
         }   else {
             p.textContent = inputValue;
         }
